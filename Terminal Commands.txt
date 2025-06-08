@@ -1,0 +1,15 @@
+**** 05_Dij_Serial.c ****
+gcc 05_Dij_Serial.c -o 05_Dij_Serial
+./05_Dij_Serial
+
+**** 05_Dij_OpenMP.c ****
+gcc -fopenmp 05_Dij_OpenMP.c -o 05_Dij_OpenMP
+./05_Dij_OpenMP 4 > Dij_OpenMP_Output
+
+**** 05_Dij_MPI.c ****
+mpicc 05_Dij_MPI.c -o 05_Dij_MPI
+mpirun -n 4 ./05_Dij_MPI > 05_Dij_MPI_Output
+
+**** 05_FW_Serial_OpenMP.c ****
+gcc -fopenmp 05_FW_Serial_OpenMP.c -o 05_FW_Serial_OpenMP
+./05_FW_Serial_OpenMP
